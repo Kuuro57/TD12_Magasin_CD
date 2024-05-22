@@ -20,8 +20,7 @@ public class MainChargeurMagasin {
 	 *             en cas de probleme de lecture entree/sortie
 	 */
 	public static void main(String args[]) throws IOException {
-		
-<<<<<<< HEAD
+
 		String repertoire = "magasinCD_donnees/musicbrainzSimple/";
 		ChargeurMagasin charge = new ChargeurMagasin(repertoire);
 		Magasin resultat = charge.chargerMagasin();

@@ -19,10 +19,15 @@ public class MainChargeurCD {
 	 *             si fichier inexistant
 	 */
 	public static void main(String args[]) throws IOException {
-		String nomFichier = "magasinCD_donnees/musicbrainzSimple/Benabar_Benabar.xml";
-		ChargeurCD charge = new ChargeurCD(nomFichier);
-		CD c = charge.chargerCD();
-		System.out.println(c);
+		String nomFichier1 = "magasinCD_donnees/musicbrainzSimple/Benabar_Benabar.xml";
+		String nomFichier2 = "magasinCD_donnees/musicbrainzSimple/Gorillaz_.xml";
+		ChargeurCD charge1 = new ChargeurCD(nomFichier1);
+		ChargeurCD charge2 = new ChargeurCD(nomFichier2);
+		CD c1 = charge1.chargerCD();
+		CD c2 = charge2.chargerCD();
+		System.out.println(c1);
+		System.out.println(c2);
+		System.out.println(c1.getNomArtiste().compareTo(c2.getNomArtiste()));
 	}
 
 }

@@ -3,7 +3,6 @@ package test;
 import XML.ChargeurMagasin;
 import donnees.*;
 import org.junit.jupiter.api.Test;
-import org.testng.Assert;
 
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
