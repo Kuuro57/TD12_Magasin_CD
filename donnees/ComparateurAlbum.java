@@ -2,10 +2,6 @@ package donnees;
 
 public class ComparateurAlbum implements ComparateurCd {
 
-    public ComparateurAlbum() {
-
-    }
-
     @Override
     public boolean etreAvant(CD cd1, CD cd2) {
         String album1 = cd1.getNomCD();
