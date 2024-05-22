@@ -21,6 +21,7 @@ public class MainChargeurMagasin {
 	 */
 	public static void main(String args[]) throws IOException {
 		
+<<<<<<< HEAD
 		String repertoire = "magasinCD_donnees/musicbrainzSimple/";
 		ChargeurMagasin charge = new ChargeurMagasin(repertoire);
 		Magasin resultat = charge.chargerMagasin();
@@ -29,6 +30,16 @@ public class MainChargeurMagasin {
 
 		/*
 		System.out.println(resultat.trierArtiste());
+=======
+		String repertoire = "magasinCD_donnees/musicbrainzSimpleTest/";
+		ChargeurMagasin charge = new ChargeurMagasin(repertoire);
+		Magasin resultat = charge.chargerMagasin();
+
+		System.out.println(resultat.trierAriste());
+
+		/*
+		System.out.println(resultat.trierAlbum());
+>>>>>>> bab547a (Ajout des class du TD11)
 		*/
 	}
 
