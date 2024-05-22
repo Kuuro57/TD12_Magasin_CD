@@ -20,12 +20,13 @@ public class TestMagasin {
         String repertoire = "magasinCD_donnees/musicbrainzSimpleTest/";
         ChargeurMagasin charge = new ChargeurMagasin(repertoire);
         Magasin resultat = charge.chargerMagasin();
+        ComparateurArtiste compArtiste = new ComparateurArtiste();
 
         // Appel de la méthode
-        ArrayList<CD> liste = resultat.trierAriste();
-        String artiste1 = liste.get(0).getNomArtiste();
-        String artiste2 = liste.get(1).getNomArtiste();
-        String artiste3 = liste.get(2).getNomArtiste();
+        resultat.trier(compArtiste);
+        String artiste1 = resultat.getCd(0).getNomArtiste();
+        String artiste2 = resultat.getCd(1).getNomArtiste();
+        String artiste3 = resultat.getCd(2).getNomArtiste();
 
         // Vérifications
         assertEquals("Benabar", artiste1, "Le premier artiste devrait être Bénabar !");
@@ -41,12 +42,13 @@ public class TestMagasin {
         String repertoire = "magasinCD_donnees/musicbrainzSimpleTest/";
         ChargeurMagasin charge = new ChargeurMagasin(repertoire);
         Magasin resultat = charge.chargerMagasin();
+        ComparateurAlbum compAlbum = new ComparateurAlbum();
 
         // Appel de la méthode
-        ArrayList<CD> liste = resultat.trierAlbum();
-        String album1 = liste.get(0).getNomCD();
-        String album2 = liste.get(1).getNomCD();
-        String album3 = liste.get(2).getNomCD();
+        resultat.trier(compAlbum);
+        String album1 = resultat.getCd(0).getNomCD();
+        String album2 = resultat.getCd(1).getNomCD();
+        String album3 = resultat.getCd(2).getNomCD();
 
         // Vérifications
         assertEquals("Benabar", album1, "Le premier album devrait être Benabar !");

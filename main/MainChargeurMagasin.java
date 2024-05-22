@@ -30,7 +30,9 @@ public class MainChargeurMagasin {
 		ComparateurArtiste compArtiste = new ComparateurArtiste();
 		ComparateurAlbum compAlbum = new ComparateurAlbum();
 
-		System.out.println(resultat.trier(compAlbum));
+		resultat.trier(compArtiste);
+
+		System.out.println(resultat);
 
 
 	}
