@@ -1,0 +1,2 @@
+Le constructeur ChargeurMagasin(rep) créé un objet de type ChargeurMagasin.
+La méthode chargerMagasin() créé un objet de type Magasin, puis le constructeur ChargeurCD(fichier) créé un objet de type ChargeurCD. La méthode chargerCD() est appelé du l'objet précédemment créé et appel le constructeur CD(artiste, nomCd) permettant de créer un nouveau CD. La méthode chargerCD() extrait puis ajoute 2 pistes au cd. Une fois le chargement terminé, la méthode chargerMagasin ajoute le cd chargé au magasin.
