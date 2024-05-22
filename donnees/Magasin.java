@@ -185,4 +185,40 @@ public class Magasin {
 		return newListeCds;
 	}
 
+	public ArrayList<CD> trier(ComparateurCd comp) {
+		// Initialisation des variables
+		ArrayList<CD> newListeCds = new ArrayList<>();
+		boolean cdAjouter = false;
+		// Boucle sur les cd de la liste de l'objet
+		for (CD cd : this.listeCds) {
+			// Si la liste est vide
+			if (newListeCds.isEmpty()) {
+				// On ajoute le cd
+				newListeCds.add(cd);
+			}
+			// Sinon
+			else {
+				// Boucle sur les cd de la nouvelles liste
+				for (int i = 0; i < newListeCds.size(); i++) {
+					// Si le cd est pas ajouté
+					if (!cdAjouter) {
+						// On compare avec le comparateur fourni en paramètre et si il est avant
+						if (comp.etreAvant(cd, newListeCds.get(i))) {
+							// On ajoute le cd avant le cd qu'on regarde de la nouvelle liste et on met le booléen à true
+							newListeCds.add(i, cd);
+							cdAjouter = true;
+						}
+						else if (i == newListeCds.size() - 1) {
+							// On ajoute le cd à la fin de la nouvelle liste et on met le booléen à true
+							newListeCds.addLast(cd);
+							cdAjouter = true;
+						}
+					}
+				}
+				// On remet le booléen à false
+				cdAjouter = false;
+			}
+		}
+		return newListeCds;
+	}
 }
